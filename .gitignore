@@ -44,6 +44,7 @@ BuildPlan/
 .windsurf/
 Development-Plan.md
 DEPLOYMENT.md
+GITHUB_PUBLISHING_GUIDE.md
 
 # Additional development files
 *.log.*
