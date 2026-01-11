@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  mcp-klipper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mcp-klipper-server
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - LOG_LEVEL=info
+      - GIT_REPOSITORY=https://github.com/Klipper3d/klipper.git
+      - GIT_BRANCH=master
+      - GIT_LOCAL_PATH=/app/data/klipper-repo
+      - SEARCH_MAX_RESULTS=10
+      - SEARCH_SNIPPET_LENGTH=200
+    volumes:
+      - klipper-data:/app/data
+    ports:
+      - "3000:3000"
+    healthcheck:
+      test: ["CMD", "node", "-e", "process.exit(0)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+volumes:
+  klipper-data:
+    driver: local

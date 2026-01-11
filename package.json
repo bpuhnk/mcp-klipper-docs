@@ -1,0 +1,67 @@
+{
+  "name": "mcp-klipper-docs",
+  "version": "1.0.0",
+  "description": "MCP server for Klipper 3D printer firmware documentation",
+  "main": "dist/server.js",
+  "types": "dist/server.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node --project tsconfig.dev.json src/server.ts",
+    "start": "node dist/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "prepack": "npm run build",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "klipper",
+    "3d-printing",
+    "documentation",
+    "ai-assistant",
+    "3d",
+    "printer",
+    "3d-printer"
+  ],
+  "author": {
+    "name": "Ben Phillips",
+    "email": "bpuhnk@gmail.com",
+    "url": "https://github.com/bpuhnk"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bpuhnk/mcp-klipper-docs.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "lunr": "^2.3.9",
+    "simple-git": "^3.22.0",
+    "marked": "^11.1.1",
+    "gray-matter": "^4.0.3"
+  },
+  "bugs": {
+    "url": "https://github.com/bpuhnk/mcp-klipper-docs/issues"
+  },
+  "homepage": "https://github.com/bpuhnk/mcp-klipper-docs#readme",
+  "devDependencies": {
+    "@types/lunr": "^2.3.7",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.11",
+    "ts-jest": "^29.1.1",
+    "eslint": "^8.56.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "rimraf": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
