@@ -5,8 +5,9 @@
   "main": "dist/server.js",
   "types": "dist/server.d.ts",
   "bin": {
-    "mcp-klipper-docs": "dist/server.js"
+    "mcp-klipper-docs": "./bin/mcp-klipper-docs"
   },
+  "files":["dist/", "bin/"],
   "scripts": {
     "build": "tsc",
     "dev": "ts-node --project tsconfig.dev.json src/server.ts",
