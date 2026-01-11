@@ -5,7 +5,7 @@
   "main": "dist/server.js",
   "types": "dist/server.d.ts",
   "bin":{
-    "mc-klipper-docs":"dist/server.js"
+    "mcp-klipper-docs":"dist/server.js"
   },
   "scripts": {
     "build": "tsc",
