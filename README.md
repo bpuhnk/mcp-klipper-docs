@@ -70,11 +70,37 @@ npm install mcp-klipper-docs
 
 2. **Add the MCP server**:
 
+#### Option 1: Global Installation (Recommended)
 ```json
 {
   "mcpServers": {
     "klipper-docs": {
-      "command": "mcp-klipper-docs"
+      "command": "node",
+      "args": ["C:\\Users\\bpuhnk\\AppData\\Roaming\\npm\\node_modules\\mcp-klipper-docs\\dist\\server.js"]
+    }
+  }
+}
+```
+
+#### Option 2: Using npx
+```json
+{
+  "mcpServers": {
+    "klipper-docs": {
+      "command": "npx",
+      "args": ["-y", "mcp-klipper-docs@1.0.1"]
+    }
+  }
+}
+```
+
+#### Option 3: Local Development
+```json
+{
+  "mcpServers": {
+    "klipper-docs": {
+      "command": "node",
+      "args": ["C:\\Users\\bpuhnk\\source\\repos\\MCP_Klipper\\dist\\server.js"]
     }
   }
 }
@@ -83,6 +109,29 @@ npm install mcp-klipper-docs
 3. **Restart Claude Desktop**
 
 That's it! 🎉 Claude now has instant access to all Klipper documentation.
+
+### 📦 Package Information
+
+- **npm Package**: [mcp-klipper-docs](https://www.npmjs.com/package/mcp-klipper-docs)
+- **Version**: 1.0.1
+- **Repository**: [GitHub](https://github.com/bpuhnk/mcp-klipper-docs)
+- **License**: MIT
+- **Author**: Ben Phillips
+
+### 🔍 Verification
+
+After installation, verify everything works:
+
+```bash
+# Check package installation
+npm list -g mcp-klipper-docs
+
+# Test server startup
+node C:\Users\bpuhnk\AppData\Roaming\npm\node_modules\mcp-klipper-docs\dist\server.js
+
+# Or using npx
+npx -y mcp-klipper-docs@1.0.1
+```
 
 ---
 
@@ -437,13 +486,19 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Get Help
 - **📖 Documentation**: Check this README and the `/docs` folder
-- **🐛 Issues**: [Report bugs on GitHub](https://github.com/yourusername/mcp-klipper-docs/issues)
-- **💬 Discussions**: [Join GitHub Discussions](https://github.com/yourusername/mcp-klipper-docs/discussions)
+- **🐛 Issues**: [Report bugs on GitHub](https://github.com/bpuhnk/mcp-klipper-docs/issues)
+- **💬 Discussions**: [Join GitHub Discussions](https://github.com/bpuhnk/mcp-klipper-docs/discussions)
+- **📦 npm Issues**: [Report package issues](https://www.npmjs.com/package/mcp-klipper-docs)
 
 ### Community
 - **Discord**: Join the Klipper and MCP communities
 - **Reddit**: r/klipper and r/3Dprinting
-- **Twitter/X**: Follow @klipper3d and MCP updates
+- **Twitter/X**: Follow @bpuhnk @klipper3d and MCP updates
+
+### MCP Registry
+- **Registry Entry**: Available for MCP server discovery
+- **Installation**: `npm install -g mcp-klipper-docs`
+- **Version**: 1.0.1 (Latest)
 
 ---
 
