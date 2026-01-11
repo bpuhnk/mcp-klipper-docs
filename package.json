@@ -4,6 +4,9 @@
   "description": "MCP server for Klipper 3D printer firmware documentation",
   "main": "dist/server.js",
   "types": "dist/server.d.ts",
+  "bin":{
+    "mc-klipper-docs":"dist/server.js"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "ts-node --project tsconfig.dev.json src/server.ts",
