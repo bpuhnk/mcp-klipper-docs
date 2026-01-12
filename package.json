@@ -5,7 +5,7 @@
   "main": "dist/server.js",
   "types": "dist/server.d.ts",
   "bin": {
-    "mcp-klipper-docs": "./bin/mcp-klipper-docs"
+    "mcp-klipper-docs": "./dist/server.js"
   },
   "files": [
     "dist/",
