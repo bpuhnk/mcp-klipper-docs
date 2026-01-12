@@ -1,6 +1,6 @@
 {
   "name": "mcp-klipper-docs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "MCP server for Klipper 3D printer firmware documentation",
   "main": "dist/server.js",
   "types": "dist/server.d.ts",
